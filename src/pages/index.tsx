@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import { Description } from "../components/Description/Description";
 import { Header } from "../components/Header/Header";
+import { Items } from "../components/Items/Items";
+import { Repositories } from "../components/Repositories/Repositories";
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +10,10 @@ const Home: NextPage = () => {
       <Header />
 
       <Description />
+
+      <Items />
+
+      <Repositories />
     </>
   );
 };
