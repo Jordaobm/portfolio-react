@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { COLORS } from "../../styles/colors";
-import { Repository } from "../Repository/Repository";
+import { Carousel } from "../Carousel/Carousel";
 export const Repositories = () => {
   const [showText, setShowText] = useState("");
 
@@ -25,27 +25,6 @@ export const Repositories = () => {
     };
   }, []);
 
-  const repositories = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-    {
-      id: 6,
-    },
-  ];
-
   return (
     <>
       <Container>
@@ -66,7 +45,7 @@ export const Repositories = () => {
             </p>
             <p>
               Dentro do meu github construo aplicações para reforçar conceitos
-              básicos e avançados, como foi recentemente o caso do
+              básicos e avançados, como foi recentemente o caso do{" "}
               <strong>performance-react</strong> e <strong>tests-react</strong>.
             </p>
           </section>
@@ -74,9 +53,7 @@ export const Repositories = () => {
       </Container>
 
       <CarouselContainer>
-        {repositories?.map((e) => (
-          <Repository key={e?.id} id={e?.id} />
-        ))}
+        <Carousel />
       </CarouselContainer>
     </>
   );
@@ -178,6 +155,5 @@ const Content = styled.div<ContentProps>`
 const CarouselContainer = styled.div`
   width: 100%;
   background-color: ${COLORS.blueopacity10};
-  display: flex;
-  gap: 20px;
+  overflow-x: hidden;
 `;
