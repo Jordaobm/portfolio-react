@@ -81,8 +81,9 @@ export const Description = () => {
 
 const Container = styled.header`
   width: 100%;
-  margin-top: 60px;
+  margin-top: 80px;
   overflow: hidden;
+  padding: 0 2%;
 `;
 
 const Content = styled.div`
@@ -92,7 +93,6 @@ const Content = styled.div`
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2%;
 
   @media (max-width: 1180px) {
     flex-direction: column;
@@ -111,8 +111,8 @@ export const AboutMe = styled.div`
     margin-top: 30px;
 
     font-weight: 600;
-    font-size: 36px;
-    line-height: 38px;
+    font-size: 40px;
+    line-height: 46px;
 
     color: ${COLORS.black};
   }
@@ -147,7 +147,7 @@ export const Tag = styled.div`
   }
 
   p {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
 

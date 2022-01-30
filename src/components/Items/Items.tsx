@@ -28,6 +28,7 @@ export const Items = () => {
 const Container = styled.header`
   width: 100%;
   margin-top: 60px;
+  padding: 0 2%;
 `;
 
 const Content = styled.div`
@@ -37,7 +38,6 @@ const Content = styled.div`
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2%;
 
   @media (max-width: 768px) {
     flex-direction: column;
