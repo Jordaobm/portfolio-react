@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { COLORS } from "../../styles/colors";
-import Carousel from "react-simply-carousel";
-import { ForkIcon, StarIcon } from "../../assets/icons";
-
+import { Repository } from "../Repository/Repository";
 export const Repositories = () => {
   const [showText, setShowText] = useState("");
-  const [showCarousel, setShowCarousel] = useState("");
+
   const handleScroll = () => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
@@ -16,9 +14,7 @@ export const Repositories = () => {
       document.documentElement.clientHeight;
 
     const scrolled = winScroll / height;
-    console.log(scrolled);
     setShowText(scrolled > 0 ? "showRepositories" : "hideRepositories");
-    setShowCarousel(scrolled >= 1 ? "showRepositories" : "hideRepositories");
   };
 
   useEffect(() => {
@@ -29,7 +25,26 @@ export const Repositories = () => {
     };
   }, []);
 
-  const [activeSlide, setActiveSlide] = useState(0);
+  const repositories = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+    {
+      id: 4,
+    },
+    {
+      id: 5,
+    },
+    {
+      id: 6,
+    },
+  ];
 
   return (
     <>
@@ -59,40 +74,9 @@ export const Repositories = () => {
       </Container>
 
       <CarouselContainer>
-        <Carousel
-          speed={1000 * 8}
-          autoplay
-          autoplayDirection="forward"
-          activeSlideIndex={activeSlide}
-          onRequestChange={setActiveSlide}
-          itemsToShow={5}
-          infinite
-        >
-          {Array.from({ length: 10 }).map((item, index) => (
-            <RepositoryContainer key={index}>
-              <Repository>
-                <header>TypeScript</header>
-                <h1>finances</h1>
-                <p>
-                  Finances é um aplicativo de gerenciamento de contas onde o
-                  foco é simplificar a forma como você monta a sua planilha
-                  financeira de gastos. A ideia aqui é manter o usuário sempre
-                  informado do quanto gastou e quanto há entre seus gastos e
-                  ganhos.
-                </p>
-
-                <footer>
-                  <div>
-                    <ForkIcon /> <p>3</p>
-                  </div>
-                  <div>
-                    <StarIcon /> <p>29</p>
-                  </div>
-                </footer>
-              </Repository>
-            </RepositoryContainer>
-          ))}
-        </Carousel>
+        {repositories?.map((e) => (
+          <Repository key={e?.id} id={e?.id} />
+        ))}
       </CarouselContainer>
     </>
   );
@@ -142,7 +126,7 @@ const Content = styled.div<ContentProps>`
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  animation: ${(props) => props?.scrollPosition} 1s ease 0s 1 normal forwards;
+  animation: ${(props) => props?.scrollPosition} 0.5s ease 0s 1 normal forwards;
 
   @media (max-width: 1050px) {
     flex-direction: column;
@@ -191,66 +175,9 @@ const Content = styled.div<ContentProps>`
   }
 `;
 
-const CarouselContainer = styled.div``;
-
-const RepositoryContainer = styled.div`
-  border: 20px solid ${COLORS.blueopacity10};
-`;
-
-const Repository = styled.div`
-  width: 388px;
-
+const CarouselContainer = styled.div`
+  width: 100%;
+  background-color: ${COLORS.blueopacity10};
   display: flex;
-  flex-direction: column;
-  background-color: ${COLORS.white};
-
-  padding: 24px;
-  header {
-    display: flex;
-    justify-content: end;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    color: ${COLORS.react};
-  }
-
-  h1 {
-    margin-top: 24px;
-    margin-bottom: 7px;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 27px;
-    color: ${COLORS.black};
-  }
-
-  > p {
-    font-size: 12px;
-    line-height: 15px;
-    color: ${COLORS.grayopacity40};
-  }
-
-  footer {
-    margin-top: 18px;
-    display: flex;
-    gap: 20px;
-
-    div {
-      gap: 5px;
-
-      display: flex;
-      align-items: center;
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-
-      p {
-        font-weight: 600;
-        font-size: 10px;
-        line-height: 12px;
-
-        color: ${COLORS.green};
-      }
-    }
-  }
+  gap: 20px;
 `;
