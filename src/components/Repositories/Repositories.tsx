@@ -153,6 +153,7 @@ const Content = styled.div<ContentProps>`
 `;
 
 const CarouselContainer = styled.div`
+  padding-top: 60px;
   width: 100%;
   background-color: ${COLORS.blueopacity10};
   overflow-x: hidden;

@@ -52,11 +52,11 @@ const FirstCarousel = styled.div`
 
   @keyframes firstCarousel {
     0% {
-      transform: translateX(0px);
+      transform: translateX(2854.5px);
     }
 
     100% {
-      transform: translateX(2854.5px);
+      transform: translateX(0px);
     }
   }
 
@@ -72,11 +72,11 @@ const SecondCarousel = styled.div`
 
   @keyframes secondCarousel {
     0% {
-      transform: translateX(-2854.5px);
+      transform: translateX(0px);
     }
 
     100% {
-      transform: translateX(0px);
+      transform: translateX(-2854.5px);
     }
   }
 
