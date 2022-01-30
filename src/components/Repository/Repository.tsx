@@ -29,6 +29,7 @@ export const Repository = ({ id }: any) => {
 const Container = styled.div`
   width: 388px;
   min-width: 388px;
+  height: 234px;
 
   display: flex;
   flex-direction: column;

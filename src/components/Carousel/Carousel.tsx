@@ -48,7 +48,7 @@ const Container = styled.div``;
 const FirstCarousel = styled.div`
   display: flex;
   gap: 20px;
-  background: red;
+  /* background: red; */
 
   @keyframes firstCarousel {
     0% {
@@ -56,23 +56,23 @@ const FirstCarousel = styled.div`
     }
 
     100% {
-      transform: translateX(2855px);
+      transform: translateX(2854.5px);
     }
   }
 
-  animation: firstCarousel 10s linear 0s infinite normal forwards;
+  animation: firstCarousel 30s linear 0s infinite normal forwards;
 `;
 
 const SecondCarousel = styled.div`
   display: flex;
   gap: 20px;
-  background: yellow;
+  /* background: yellow; */
   position: relative;
-  top: -235px;
+  top: -234px;
 
   @keyframes secondCarousel {
     0% {
-      transform: translateX(-2855px);
+      transform: translateX(-2854.5px);
     }
 
     100% {
@@ -80,5 +80,5 @@ const SecondCarousel = styled.div`
     }
   }
 
-  animation: secondCarousel 10s linear 0s infinite normal forwards;
+  animation: secondCarousel 30s linear 0s infinite normal forwards;
 `;
