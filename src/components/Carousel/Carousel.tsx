@@ -19,16 +19,27 @@ export const Carousel = () => {
     {
       id: 5,
     },
+    {
+      id: 6,
+    },
+    {
+      id: 7,
+    },
   ]);
+
+  const defaultWidth = {
+    width: 401 + (repositories?.length - 1) * 410,
+    items: repositories?.length,
+  };
 
   return (
     <Container>
-      <FirstCarousel>
+      <FirstCarousel defaultWidth={defaultWidth}>
         {repositories?.map((e) => (
           <Repository key={e?.id} id={e?.id} />
         ))}
       </FirstCarousel>
-      <SecondCarousel>
+      <SecondCarousel defaultWidth={defaultWidth}>
         {repositories?.map((e) => (
           <Repository key={e?.id} id={e?.id} />
         ))}
@@ -39,14 +50,21 @@ export const Carousel = () => {
 
 const Container = styled.div``;
 
-const FirstCarousel = styled.div`
+interface CarouselProps {
+  defaultWidth: {
+    width: number;
+    items: number;
+  };
+}
+
+const FirstCarousel = styled.div<CarouselProps>`
   display: flex;
   gap: 20px;
   /* background: red; */
 
   @keyframes firstCarousel {
     0% {
-      transform: translateX(2037px);
+      transform: translateX(${(props) => props?.defaultWidth?.width}px);
     }
 
     100% {
@@ -54,10 +72,11 @@ const FirstCarousel = styled.div`
     }
   }
 
-  animation: firstCarousel 20s linear 0s infinite normal forwards;
+  animation: firstCarousel ${(props) => props?.defaultWidth?.items * 4}s linear
+    0s infinite normal forwards;
 `;
 
-const SecondCarousel = styled.div`
+const SecondCarousel = styled.div<CarouselProps>`
   display: flex;
   gap: 20px;
   /* background: yellow; */
@@ -70,9 +89,10 @@ const SecondCarousel = styled.div`
     }
 
     100% {
-      transform: translateX(-2037px);
+      transform: translateX(-${(props) => props?.defaultWidth?.width}px);
     }
   }
 
-  animation: secondCarousel 20s linear 0s infinite normal forwards;
+  animation: secondCarousel ${(props) => props?.defaultWidth?.items * 4}s linear
+    0s infinite normal forwards;
 `;
