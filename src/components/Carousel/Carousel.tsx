@@ -1,32 +1,8 @@
-import { Repository } from "../Repository/Repository";
 import styled from "styled-components";
-import { useState } from "react";
+import { repositories } from "../../services/Repositories";
+import { Repository } from "../Repository/Repository";
 
 export const Carousel = () => {
-  const [repositories, setRepositories] = useState([
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-    {
-      id: 6,
-    },
-    {
-      id: 7,
-    },
-  ]);
-
   const defaultWidth = {
     width: 401 + (repositories?.length - 1) * 410,
     items: repositories?.length,
@@ -35,13 +11,13 @@ export const Carousel = () => {
   return (
     <Container>
       <FirstCarousel defaultWidth={defaultWidth}>
-        {repositories?.map((e) => (
-          <Repository key={e?.id} id={e?.id} />
+        {repositories?.map((repository) => (
+          <Repository key={repository?.id} repository={repository} />
         ))}
       </FirstCarousel>
       <SecondCarousel defaultWidth={defaultWidth}>
-        {repositories?.map((e) => (
-          <Repository key={e?.id} id={e?.id} />
+        {repositories?.map((repository) => (
+          <Repository key={repository?.id} repository={repository} />
         ))}
       </SecondCarousel>
     </Container>

@@ -4,6 +4,7 @@ import { COLORS } from "../../styles/colors";
 import { Carousel } from "../Carousel/Carousel";
 export const Repositories = () => {
   const [showText, setShowText] = useState("");
+  const [showCarousel, setShowCarousel] = useState("");
 
   const handleScroll = () => {
     const winScroll =
@@ -15,6 +16,7 @@ export const Repositories = () => {
 
     const scrolled = winScroll / height;
     setShowText(scrolled > 0 ? "showRepositories" : "hideRepositories");
+    setShowCarousel(scrolled >= 0.5 ? "showCarousel" : "hideShowCarousel");
   };
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export const Repositories = () => {
   }, []);
 
   return (
-    <>
+    <Background>
       <Container>
         <Content scrollPosition={showText}>
           <section>
@@ -52,18 +54,20 @@ export const Repositories = () => {
         </Content>
       </Container>
 
-      <CarouselContainer>
+      <CarouselContainer scrollPosition={showCarousel}>
         <Carousel />
       </CarouselContainer>
-    </>
+    </Background>
   );
 };
+
+const Background = styled.div`
+  background-color: ${COLORS.blueopacity10};
+`;
 
 const Container = styled.header`
   width: 100%;
   margin-top: 60px;
-  background-color: ${COLORS.blueopacity10};
-  padding: 0 2%;
   padding-top: 120px;
   margin-top: 120px;
 `;
@@ -152,9 +156,34 @@ const Content = styled.div<ContentProps>`
   }
 `;
 
-const CarouselContainer = styled.div`
+const CarouselContainer = styled.div<ContentProps>`
   padding-top: 60px;
   width: 100%;
-  background-color: ${COLORS.blueopacity10};
   overflow-x: hidden;
+
+  @keyframes showCarousel {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(-30px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes hideShowCarousel {
+    0% {
+      transform: translateY(-30px);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+  }
+
+  animation: ${(props) => props?.scrollPosition} 0.5s ease 0s 1 normal forwards;
 `;
