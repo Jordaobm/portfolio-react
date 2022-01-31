@@ -19,12 +19,6 @@ export const Carousel = () => {
     {
       id: 5,
     },
-    {
-      id: 6,
-    },
-    {
-      id: 7,
-    },
   ]);
 
   return (
@@ -52,7 +46,7 @@ const FirstCarousel = styled.div`
 
   @keyframes firstCarousel {
     0% {
-      transform: translateX(2854.5px);
+      transform: translateX(2037px);
     }
 
     100% {
@@ -60,7 +54,7 @@ const FirstCarousel = styled.div`
     }
   }
 
-  animation: firstCarousel 30s linear 0s infinite normal forwards;
+  animation: firstCarousel 20s linear 0s infinite normal forwards;
 `;
 
 const SecondCarousel = styled.div`
@@ -76,9 +70,9 @@ const SecondCarousel = styled.div`
     }
 
     100% {
-      transform: translateX(-2854.5px);
+      transform: translateX(-2037px);
     }
   }
 
-  animation: secondCarousel 30s linear 0s infinite normal forwards;
+  animation: secondCarousel 20s linear 0s infinite normal forwards;
 `;
