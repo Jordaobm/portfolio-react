@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FollowersIcon, GitIcon, StarsIcon } from "../../assets/icons";
 import { COLORS } from "../../styles/colors";
@@ -27,7 +28,7 @@ export const Items = () => {
 
 const Container = styled.header`
   width: 100%;
-  margin-top: 60px;
+  margin-top: 80px;
   padding: 0 2%;
 `;
 
@@ -63,4 +64,18 @@ const Content = styled.div`
 
     color: ${COLORS.black};
   }
+
+  @keyframes showText {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  animation: showText 1s ease 0s 1 normal forwards;
 `;
