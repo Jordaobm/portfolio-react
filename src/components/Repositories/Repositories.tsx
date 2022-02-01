@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { COLORS } from "../../styles/colors";
 import { Carousel } from "../Carousel/Carousel";
+
 export const Repositories = () => {
   const [showText, setShowText] = useState("");
   const [showCarousel, setShowCarousel] = useState("");
@@ -16,7 +17,7 @@ export const Repositories = () => {
 
     const scrolled = winScroll / height;
     setShowText(scrolled > 0 ? "showRepositories" : "hideRepositories");
-    setShowCarousel(scrolled >= 0.5 ? "showCarousel" : "hideShowCarousel");
+    setShowCarousel(scrolled >= 0.7 ? "showCarousel" : "hideShowCarousel");
   };
 
   useEffect(() => {
@@ -29,30 +30,34 @@ export const Repositories = () => {
 
   return (
     <Background>
-      <Container>
-        <Content scrollPosition={showText}>
-          <section>
-            <p>Sobre meus repositórios</p>
-            <h3>O que você vai encontrar?</h3>
-          </section>
+      <Padding>
+        <Container>
+          <Content scrollPosition={showText}>
+            <section>
+              <p>Sobre meus repositórios</p>
+              <h3>O que você vai encontrar?</h3>
+            </section>
 
-          <section>
-            <p>
-              Utilizo o espaço do meu github para centralizar todo o
-              conhecimento que venho adquirindo desde que comecei a estudar
-              programação. Lá terá uma variedade de repositórios, desde sites
-              simples com intuíto apenas de treinar a escrita de código até
-              aplicativos um pouco mais complexos que me auxiliam no dia a dia,
-              como o <strong>Notes</strong> e o <strong>Finances</strong>.
-            </p>
-            <p>
-              Dentro do meu github construo aplicações para reforçar conceitos
-              básicos e avançados, como foi recentemente o caso do{" "}
-              <strong>performance-react</strong> e <strong>tests-react</strong>.
-            </p>
-          </section>
-        </Content>
-      </Container>
+            <section>
+              <p>
+                Utilizo o espaço do meu github para centralizar todo o
+                conhecimento que venho adquirindo desde que comecei a estudar
+                programação. Lá terá uma variedade de repositórios, desde sites
+                simples com intuíto apenas de treinar a escrita de código até
+                aplicativos um pouco mais complexos que me auxiliam no dia a
+                dia, como o <strong>Notes</strong> e o <strong>Finances</strong>
+                .
+              </p>
+              <p>
+                Dentro do meu github construo aplicações para reforçar conceitos
+                básicos e avançados, como foi recentemente o caso do{" "}
+                <strong>performance-react</strong> e{" "}
+                <strong>tests-react</strong>.
+              </p>
+            </section>
+          </Content>
+        </Container>
+      </Padding>
 
       <CarouselContainer scrollPosition={showCarousel}>
         <Carousel />
@@ -63,6 +68,11 @@ export const Repositories = () => {
 
 const Background = styled.div`
   background-color: ${COLORS.blueopacity10};
+  padding-bottom: 20px;
+`;
+
+const Padding = styled.div`
+  padding: 0 2%;
 `;
 
 const Container = styled.header`
@@ -77,6 +87,8 @@ interface ContentProps {
 }
 
 const Content = styled.div<ContentProps>`
+  opacity: 0;
+
   @keyframes showRepositories {
     0% {
       transform: translateY(30px);
@@ -106,7 +118,6 @@ const Content = styled.div<ContentProps>`
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  opacity: 0;
   animation: ${(props) => props?.scrollPosition} 0.5s ease 0s 1 normal forwards;
 
   @media (max-width: 1050px) {

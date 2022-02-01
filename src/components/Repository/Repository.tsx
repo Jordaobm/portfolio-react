@@ -9,7 +9,7 @@ interface RepositoryProps {
 
 export const Repository = ({ repository }: RepositoryProps) => {
   return (
-    <Container id={repository?.id}>
+    <Container href={repository?.html_url} target="_blank" rel="noreferrer">
       <header>{repository?.language}</header>
       <h1>{repository?.name}</h1>
       <p>{repository?.description}</p>
@@ -26,7 +26,7 @@ export const Repository = ({ repository }: RepositoryProps) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.a`
   width: 388px;
   min-width: 388px;
   height: 234px;
