@@ -49,6 +49,12 @@ export const Comments = () => {
 
 const Container = styled.header`
   width: 100%;
+  padding: 0 2%;
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: -300px;
+  }
 `;
 
 interface ContentProps {

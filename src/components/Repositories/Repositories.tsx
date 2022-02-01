@@ -69,6 +69,18 @@ export const Repositories = () => {
 const Background = styled.div`
   background-color: ${COLORS.blueopacity10};
   padding-bottom: 20px;
+
+  @media (max-width: 1050px) {
+    min-height: 1000px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 1300px;
+  }
+
+  @media (max-width: 650px) {
+    min-height: 1400px;
+  }
 `;
 
 const Padding = styled.div`

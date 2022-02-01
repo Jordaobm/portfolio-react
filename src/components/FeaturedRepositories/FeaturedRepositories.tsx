@@ -55,9 +55,19 @@ export const FeaturedRepositories = () => {
 };
 
 const Container = styled.header`
+  overflow-x: hidden;
   width: 100%;
   position: relative;
   top: -180px;
+  padding: 0 2%;
+
+  @media (max-width: 1050px) {
+    top: -200px;
+  }
+
+  @media (max-width: 768px) {
+    top: -500px;
+  }
 `;
 
 interface ContentProps {
@@ -100,49 +110,12 @@ const Content = styled.div<ContentProps>`
   gap: 250px;
 
   @media (max-width: 1050px) {
+    gap: 100px;
+  }
+
+  @media (max-width: 768px) {
     flex-direction: column;
-    gap: 20px;
-  }
-
-  section {
-    @media (max-width: 1050px) {
-      width: 100%;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 19px;
-      color: ${COLORS.bluetext};
-      margin-bottom: 19px;
-      max-width: 620px;
-      @media (max-width: 1050px) {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-
-    h3 {
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 58px;
-
-      max-width: 339px;
-
-      color: ${COLORS.black};
-
-      @media (max-width: 1050px) {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  }
-
-  section + section {
-    p {
-      font-size: 16px;
-      line-height: 27px;
-      color: ${COLORS.bluetext};
-    }
+    text-align: center;
   }
 `;
 
