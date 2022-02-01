@@ -4,7 +4,7 @@ import { Repository } from "../Repository/Repository";
 
 export const Carousel = () => {
   const defaultWidth = {
-    width: 401 + (repositories?.length - 1) * 410,
+    width: 380 + (repositories?.length - 1) * 410,
     items: repositories?.length,
   };
 
@@ -36,7 +36,6 @@ interface CarouselProps {
 const FirstCarousel = styled.div<CarouselProps>`
   display: flex;
   gap: 20px;
-  /* background: red; */
 
   @keyframes firstCarousel {
     0% {
@@ -48,14 +47,13 @@ const FirstCarousel = styled.div<CarouselProps>`
     }
   }
 
-  animation: firstCarousel ${(props) => props?.defaultWidth?.items * 4}s linear
+  animation: firstCarousel ${(props) => props?.defaultWidth?.items * 7}s linear
     0s infinite normal forwards;
 `;
 
 const SecondCarousel = styled.div<CarouselProps>`
   display: flex;
   gap: 20px;
-  /* background: yellow; */
   position: relative;
   top: -234px;
 
@@ -69,6 +67,6 @@ const SecondCarousel = styled.div<CarouselProps>`
     }
   }
 
-  animation: secondCarousel ${(props) => props?.defaultWidth?.items * 4}s linear
+  animation: secondCarousel ${(props) => props?.defaultWidth?.items * 7}s linear
     0s infinite normal forwards;
 `;
