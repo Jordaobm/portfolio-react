@@ -14,7 +14,7 @@ export const FeaturedRepositories = () => {
       document.documentElement.clientHeight;
 
     const scrolled = winScroll / height;
-    setShowFeatured(scrolled >= 0.9 ? "showFeatured" : "hideFeatured");
+    setShowFeatured(scrolled >= 0.7 ? "showFeatured" : "hideFeatured");
   };
 
   useEffect(() => {

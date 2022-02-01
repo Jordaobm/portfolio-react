@@ -1,9 +1,10 @@
 import { COLORS } from "../../styles/colors";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { CommentIcon } from "../../assets/icons";
 
 export const Comments = () => {
-  const [showFeatured, setShowFeatured] = useState("");
+  const [showComment, setShowComment] = useState("");
 
   const handleScroll = () => {
     const winScroll =
@@ -14,7 +15,7 @@ export const Comments = () => {
       document.documentElement.clientHeight;
 
     const scrolled = winScroll / height;
-    setShowFeatured(scrolled >= 0.9 ? "showFeatured" : "hideFeatured");
+    setShowComment(scrolled >= 0.8 ? "showComment" : "hideComment");
   };
 
   useEffect(() => {
@@ -27,7 +28,21 @@ export const Comments = () => {
 
   return (
     <Container>
-      <Content scrollPosition={showFeatured}>Comments</Content>
+      <Content scrollPosition={showComment}>
+        <CommentIcon />
+
+        <p>
+          Comecei a pouco tempo minha jornada para ser um UI Designer... Este
+          foi o primeiro conteúdo que adquiri de forma paga, e digo que valeu
+          cada centavo, é bem explicadinho e de fácil leitura e compreensão!
+        </p>
+
+        <div>
+          <p>
+            <strong>Jordão</strong> • Desenvolvedor
+          </p>
+        </div>
+      </Content>
     </Container>
   );
 };
@@ -41,83 +56,55 @@ interface ContentProps {
 }
 
 const Content = styled.div<ContentProps>`
-  @keyframes showFeatured {
+  @keyframes showComment {
     0% {
       opacity: 0;
-      transform: translateX(250px);
+      transform: translateY(250px);
     }
 
     100% {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
-  @keyframes hideFeatured {
+  @keyframes hideComment {
     0% {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
 
     100% {
       opacity: 0;
-      transform: translateX(250px);
+      transform: translateY(250px);
     }
   }
   opacity: 0;
   width: 100%;
   display: flex;
+  flex-direction: column;
   max-width: 1230px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  animation: ${(props) => props?.scrollPosition} 0.5s ease 0s 1 normal forwards;
+  text-align: center;
 
-  gap: 250px;
+  gap: 14px;
+  animation: ${(props) => props?.scrollPosition} 0.5s ease 0s 1 normal forwards;
 
   @media (max-width: 1050px) {
     flex-direction: column;
     gap: 20px;
   }
 
-  section {
-    @media (max-width: 1050px) {
-      width: 100%;
-    }
+  > p {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 700px;
 
-    p {
-      font-size: 16px;
-      line-height: 19px;
-      color: ${COLORS.bluetext};
-      margin-bottom: 19px;
-      max-width: 620px;
-      @media (max-width: 1050px) {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-
-    h3 {
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 58px;
-
-      max-width: 339px;
-
-      color: ${COLORS.black};
-
-      @media (max-width: 1050px) {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  }
-
-  section + section {
-    p {
-      font-size: 16px;
-      line-height: 27px;
-      color: ${COLORS.bluetext};
-    }
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+    color: ${COLORS.black};
   }
 `;
