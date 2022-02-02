@@ -4,7 +4,7 @@ import { Repository } from "../Repository/Repository";
 
 export const Carousel = () => {
   const defaultWidth = {
-    width: 380 + (repositories?.length - 1) * 410,
+    width: repositories?.length * 408,
     items: repositories?.length,
   };
 
