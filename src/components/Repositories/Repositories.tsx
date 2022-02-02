@@ -17,7 +17,7 @@ export const Repositories = () => {
 
     const scrolled = winScroll / height;
     setShowText(scrolled > 0 ? "showRepositories" : "hideRepositories");
-    setShowCarousel(scrolled >= 0.7 ? "showCarousel" : "hideShowCarousel");
+    setShowCarousel(scrolled >= 0.3 ? "showCarousel" : "hideShowCarousel");
   };
 
   useEffect(() => {
@@ -80,6 +80,14 @@ const Background = styled.div`
 
   @media (max-width: 650px) {
     min-height: 1400px;
+  }
+
+  @media (max-width: 490px) {
+    min-height: 1450px;
+  }
+
+  @media (max-width: 380px) {
+    min-height: 1500px;
   }
 `;
 

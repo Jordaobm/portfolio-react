@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { COLORS } from "../../styles/colors";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
@@ -15,7 +16,7 @@ export const Comments = () => {
       document.documentElement.clientHeight;
 
     const scrolled = winScroll / height;
-    setShowComment(scrolled >= 0.8 ? "showComment" : "hideComment");
+    setShowComment(scrolled >= 0.5 ? "showComment" : "hideComment");
   };
 
   useEffect(() => {
@@ -32,9 +33,9 @@ export const Comments = () => {
         <CommentIcon />
 
         <p>
-          Comecei a pouco tempo minha jornada para ser um UI Designer... Este
-          foi o primeiro conteúdo que adquiri de forma paga, e digo que valeu
-          cada centavo, é bem explicadinho e de fácil leitura e compreensão!
+          Desde 2020 em contato com a área de desenvolvimento, meu primeiro
+          contato com ReactJS ocorreu em NLW's da Rocketseat e me surpreendi com
+          a biblioteca e também com o poder do TypeScript .
         </p>
 
         <div>
@@ -50,7 +51,8 @@ export const Comments = () => {
 const Container = styled.header`
   width: 100%;
   padding: 0 2%;
-
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  height: 266px;
   @media (max-width: 768px) {
     position: relative;
     top: -300px;
