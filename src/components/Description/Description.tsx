@@ -74,7 +74,7 @@ export const Description = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.main`
   width: 100%;
   margin-top: 80px;
   overflow: hidden;
@@ -104,7 +104,7 @@ export const AboutMe = styled.div`
 
   h1 {
     margin-top: 30px;
-
+    margin-right: 10px;
     font-weight: 600;
     font-size: 40px;
     line-height: 46px;

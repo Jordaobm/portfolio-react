@@ -48,7 +48,7 @@ export const Comments = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.main`
   width: 100%;
   padding: 0 2%;
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);

@@ -14,7 +14,7 @@ export const GoBack = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.footer`
   width: 100%;
   padding: 0 2%;
   height: 100px;

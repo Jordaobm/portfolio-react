@@ -26,7 +26,7 @@ export const Items = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.main`
   width: 100%;
   margin-top: 80px;
   padding: 0 2%;

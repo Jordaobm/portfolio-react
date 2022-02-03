@@ -66,7 +66,7 @@ export const Repositories = () => {
   );
 };
 
-const Background = styled.div`
+const Background = styled.main`
   background-color: ${COLORS.blueopacity10};
   padding-bottom: 20px;
 

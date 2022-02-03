@@ -24,7 +24,7 @@ export const Footer = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.main`
   width: 100%;
   padding: 0 2%;
   margin-top: 80px;

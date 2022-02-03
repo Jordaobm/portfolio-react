@@ -54,7 +54,7 @@ export const FeaturedRepositories = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.main`
   overflow-x: hidden;
   width: 100%;
   position: relative;

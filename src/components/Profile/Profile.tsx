@@ -70,7 +70,7 @@ export const Profile = () => {
   );
 };
 
-const Container = styled.header`
+const Container = styled.main`
   width: 100%;
   padding: 0 2%;
   margin-top: 80px;
@@ -93,7 +93,7 @@ const Content = styled.div`
   gap: 120px;
 
   @media (max-width: 1120px) {
-    gap: 10px;
+    gap: 0px;
   }
 
   @media (max-width: 768px) {
