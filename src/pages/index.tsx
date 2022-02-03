@@ -3,6 +3,7 @@ import { Comments } from "../components/Comments/Comments";
 import { Description } from "../components/Description/Description";
 import { FeaturedRepositories } from "../components/FeaturedRepositories/FeaturedRepositories";
 import { Footer } from "../components/Footer/Footer";
+import { GoBack } from "../components/GoBack/GoBack";
 import { Header } from "../components/Header/Header";
 import { Items } from "../components/Items/Items";
 import { Profile } from "../components/Profile/Profile";
@@ -26,6 +27,8 @@ const Home: NextPage = () => {
       <Profile />
 
       <Footer />
+
+      <GoBack />
     </>
   );
 };

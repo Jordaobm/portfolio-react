@@ -3,7 +3,7 @@ import { Linkedin } from "../../assets/icons";
 import { COLORS } from "../../styles/colors";
 export const Header = () => {
   return (
-    <Container>
+    <Container id="top">
       <Content>
         <p>
           <FirsName>Jordão</FirsName>
