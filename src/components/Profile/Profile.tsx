@@ -69,7 +69,7 @@ const Container = styled.header`
   width: 100%;
   padding: 0 2%;
   margin-top: 80px;
-  height: 400px;
+  overflow: hidden;
   @media (max-width: 768px) {
     position: relative;
     top: -300px;
@@ -78,7 +78,6 @@ const Container = styled.header`
 
 const Content = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   max-width: 1230px;
   margin: 0 auto;
@@ -87,6 +86,15 @@ const Content = styled.div`
   text-align: center;
 
   gap: 120px;
+
+  @media (max-width: 1120px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 interface Animation {
@@ -97,14 +105,29 @@ interface Animation {
 export const ProfileImage = styled.section<Animation>`
   display: flex;
   flex: 1;
-  height: 100%;
+  height: 400px;
 
   justify-content: end;
 
+  @media (max-width: 1120px) {
+    justify-content: center;
+    align-items: center;
+  }
+
   div {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 100%;
+
+    @media (max-width: 1120px) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (max-width: 768px) {
+      width: 400px;
+      height: 400px;
+    }
 
     img {
       width: 100%;
@@ -143,29 +166,47 @@ export const ProfileImage = styled.section<Animation>`
 export const ProfileText = styled.section<Animation>`
   display: flex;
   flex: 1;
-  height: 100%;
+  height: 400px;
   flex-direction: column;
   text-align: left;
-  justify-content: center;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 
   main {
     p {
+      margin-top: 30px;
       font-size: 16px;
       line-height: 31px;
       color: ${COLORS.bluetext};
+
+      @media (max-width: 1120px) {
+        margin-top: 10px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 30px;
+      }
     }
     h1 {
       margin-top: 16px;
-      font-weight: 600;
       font-size: 48px;
       line-height: 31px;
       color: ${COLORS.black};
       font-weight: 600;
 
+      @media (max-width: 1120px) {
+        font-size: 36px;
+      }
+
       span {
         color: ${COLORS.blue};
         position: relative;
         left: -12px;
+        @media (max-width: 1120px) {
+          left: -10px;
+        }
       }
 
       strong {
@@ -176,21 +217,30 @@ export const ProfileText = styled.section<Animation>`
     }
 
     h3 {
-      margin-top: 18px;
+      margin-top: 50px;
       font-size: 28px;
       line-height: 25px;
       font-weight: 400;
       color: ${COLORS.bluetext};
+
+      @media (max-width: 768px) {
+        margin-top: 16px;
+        font-size: 18px;
+      }
     }
   }
 
-  p {
-    margin-top: 50px;
+  > p {
+    margin-top: 20px;
     font-family: Inter;
     font-size: 16px;
     line-height: 30px;
 
     color: ${COLORS.bluetext};
+
+    @media (max-width: 768px) {
+      max-width: 500px;
+    }
   }
 
   figure {
@@ -204,6 +254,12 @@ export const ProfileText = styled.section<Animation>`
       font-size: 16px;
       line-height: 31px;
       color: ${COLORS.black};
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      justify-content: center;
+      margin-top: 20px;
     }
   }
 

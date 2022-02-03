@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
 
 export const Footer = () => {
   return (
@@ -21,10 +22,13 @@ const Container = styled.header`
 
 const Content = styled.div`
   width: 100%;
+  background-color: ${COLORS.blue};
+
   height: 100%;
   display: flex;
   max-width: 1230px;
   margin: 0 auto;
+  margin-top: 160px;
   justify-content: space-between;
   align-items: center;
   text-align: center;
