@@ -29,7 +29,7 @@ export const Repositories = () => {
   }, []);
 
   return (
-    <Background>
+    <Background id="about">
       <Padding>
         <Container>
           <Content scrollPosition={showText}>

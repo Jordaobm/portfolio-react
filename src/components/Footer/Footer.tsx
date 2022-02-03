@@ -38,7 +38,6 @@ const Container = styled.header`
 const Content = styled.div`
   width: 100%;
   background-color: ${COLORS.blue};
-
   height: 225px;
   border-radius: 10px;
   display: flex;
@@ -94,6 +93,8 @@ const Content = styled.div`
     @media (max-width: 1000px) {
       justify-content: flex-start;
       padding: 10px;
+      margin-top: 10px;
+      width: 100%;
     }
   }
 
@@ -125,7 +126,7 @@ const Content = styled.div`
       right: 0%;
       top: -5%;
       svg {
-        width: 400px;
+        width: 300px;
       }
     }
 

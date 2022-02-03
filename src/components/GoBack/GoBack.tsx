@@ -17,12 +17,7 @@ export const GoBack = () => {
 const Container = styled.header`
   width: 100%;
   padding: 0 2%;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
   height: 100px;
-  @media (max-width: 768px) {
-    position: relative;
-    top: -300px;
-  }
 `;
 
 const Content = styled.div`

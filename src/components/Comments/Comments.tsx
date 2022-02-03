@@ -33,9 +33,9 @@ export const Comments = () => {
         <CommentIcon />
 
         <p>
-          Desde 2020 em contato com a área de desenvolvimento, meu primeiro
-          contato com ReactJS ocorreu em NLW's da Rocketseat e me surpreendi com
-          a biblioteca e também com o poder do TypeScript .
+          Desde 2020 na área de desenvolvimento, meu primeiro contato com
+          ReactJS ocorreu em NLW's da Rocketseat e me surpreendi com a
+          biblioteca e também com o poder do TypeScript .
         </p>
 
         <div>
@@ -55,7 +55,9 @@ const Container = styled.header`
   height: 266px;
   @media (max-width: 768px) {
     position: relative;
-    top: -300px;
+    top: -350px;
+    height: auto;
+    padding-bottom: 60px;
   }
 `;
 

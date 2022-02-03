@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Like, ReactSVG } from "../../assets/icons";
+import { repositories } from "../../services/Repositories";
 import { COLORS } from "../../styles/colors";
 
 export const Description = () => {
@@ -35,13 +36,7 @@ export const Description = () => {
               Github
             </Button>
 
-            <Button
-              href={process.env.NEXT_PUBLIC_REACT_APP_GITHUB_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Saiba mais ↓
-            </Button>
+            <Button href="#about">Saiba mais ↓</Button>
           </Actions>
         </AboutMe>
 
@@ -53,7 +48,7 @@ export const Description = () => {
             </header>
 
             <main>
-              <h2>15 Repositórios</h2>
+              <h2>{repositories?.length} Repositórios</h2>
               <p>Conheça um pouco mais sobre meu trabalho</p>
             </main>
 
@@ -147,7 +142,7 @@ export const Tag = styled.div`
   }
 
   p {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 16px;
     line-height: 19px;
 
@@ -282,10 +277,11 @@ export const Card = styled.div`
       position: absolute;
 
       width: 100%;
-      opacity: 0.2;
+      height: 100%;
+      opacity: 0.1;
 
-      top: 10px;
-      left: 10px;
+      top: 0%;
+      left: 0%;
     }
   }
 `;

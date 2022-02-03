@@ -50,15 +50,20 @@ export const Profile = () => {
             <h3>Desenvolvedor</h3>
           </main>
           <p>
-            Autodidata, criador de conteúdo, professor, atua como UI Designer há
-            mais de 8 anos, já passou por inúmeros projetos freelancer, e hoje
-            tem um Studio de design.
+            Entusiasta de programação, estudante e dedicado, atuo como
+            Desenvolvedor há quase 1 ano profissionalmente, já passei por
+            inúmeros projetos empresariais e pessoais. Tenho cada vez mais
+            vontade de crescer na área.
           </p>
 
-          <figure>
+          <a
+            href={process.env.NEXT_PUBLIC_REACT_APP_INSTAGRAM}
+            target="_blank"
+            rel="noreferrer"
+          >
             <InstagramIcon />
             <p>jordaobeghettomassariol</p>
-          </figure>
+          </a>
         </ProfileText>
       </Content>
     </Container>
@@ -243,7 +248,7 @@ export const ProfileText = styled.section<Animation>`
     }
   }
 
-  figure {
+  a {
     margin-top: 30px;
     display: flex;
     align-items: center;
