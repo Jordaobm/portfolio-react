@@ -10,4 +10,6 @@ export const COLORS = {
   green: "rgba(47, 235, 141, 1)",
   react: "rgba(33, 94, 167, 0.71)",
   white: "rgba(255, 255, 255, 1)",
+  typescript: "#007ACC",
+  javascript: "#F0DB4F",
 };

@@ -94,7 +94,6 @@ const Content = styled.div`
       justify-content: flex-start;
       padding: 10px;
       margin-top: 10px;
-      width: 100%;
     }
   }
 

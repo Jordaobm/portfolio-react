@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import { COLORS } from "../../styles/colors";
 import styled from "styled-components";
-import { useEffect, useState } from "react";
-import { CommentIcon } from "../../assets/icons";
+import { COLORS } from "../../styles/colors";
 
 export const GoBack = () => {
   return (
