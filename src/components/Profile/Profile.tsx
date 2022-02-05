@@ -51,9 +51,9 @@ export const Profile = () => {
           </main>
           <p>
             Entusiasta de programação, estudante e dedicado, atuo como
-            Desenvolvedor há quase 1 ano profissionalmente, já passei por
-            inúmeros projetos empresariais e pessoais. Tenho cada vez mais
-            vontade de crescer na área.
+            Desenvolvedor há um pouco mais de 1 ano e já passei por vários
+            projetos empresariais e pessoais. Tenho cada vez mais vontade de
+            crescer na área.
           </p>
 
           <a

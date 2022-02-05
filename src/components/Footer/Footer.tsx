@@ -95,6 +95,10 @@ const Content = styled.div`
       padding: 10px;
       margin-top: 10px;
     }
+
+    @media (max-width: 400px) {
+      width: 100%;
+    }
   }
 
   figure {
