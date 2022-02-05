@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { repositories } from "../../services/Repositories";
+import { useRepositories } from "../../context/repositories";
 import { Repository } from "../Repository/Repository";
 
 export const Carousel = () => {
+  const { repositories } = useRepositories();
+
   const defaultWidth = {
     width: repositories?.length * 408,
     items: repositories?.length,

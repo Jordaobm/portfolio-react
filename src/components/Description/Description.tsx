@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { Like, ReactSVG } from "../../assets/icons";
-import { repositories } from "../../services/Repositories";
+import { useRepositories } from "../../context/repositories";
+
 import { COLORS } from "../../styles/colors";
 
 export const Description = () => {
+  const { repositories } = useRepositories();
+
   return (
     <Container>
       <Content>
