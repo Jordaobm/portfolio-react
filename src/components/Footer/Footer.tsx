@@ -94,6 +94,9 @@ const Content = styled.div`
       justify-content: flex-start;
       padding: 10px;
       margin-top: 10px;
+    }
+
+    @media (max-width: 400px) {
       width: 100%;
     }
   }

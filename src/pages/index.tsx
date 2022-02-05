@@ -8,6 +8,7 @@ import { Header } from "../components/Header/Header";
 import { Items } from "../components/Items/Items";
 import { Profile } from "../components/Profile/Profile";
 import { Repositories } from "../components/Repositories/Repositories";
+import { Technologies } from "../components/Technologies/Technologies";
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,8 @@ const Home: NextPage = () => {
       <FeaturedRepositories />
 
       <Comments />
+
+      <Technologies />
 
       <Profile />
 
