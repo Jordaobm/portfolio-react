@@ -22,6 +22,8 @@ interface RepositoriesContext {
   repositories: Repository[];
 }
 
+const oneDay = 1000 * 60 * 60 * 24;
+
 const repositoriesContext = createContext({} as RepositoriesContext);
 
 interface RepositoriesProvider {
@@ -40,8 +42,8 @@ export const RepositoriesProvider = ({ children }: RepositoriesProvider) => {
     onError: (error) => {
       console.log(error);
     },
-    cacheTime: 5 * 60 * 1000, // 5 minutos
-    staleTime: Infinity,
+    cacheTime: oneDay,
+    staleTime: oneDay,
   });
 
   return (
