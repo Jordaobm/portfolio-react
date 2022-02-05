@@ -114,8 +114,8 @@ const Content = styled.div`
 
     position: absolute;
     left: 40%;
-    top: -12%;
-    animation: reactAnimation 10s ease 0s infinite alternate-reverse forwards;
+    top: -15%;
+    animation: reactAnimation 7s ease 0s infinite alternate-reverse forwards;
 
     @media (max-width: 1150px) {
       left: 50%;
