@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img alt="ReactJS" title="ReactJS" src="https://github.com/Jordaobm/portfolio-react/blob/main/src/assets/1.png" width="100%" />
+</div>
 
-## Getting Started
+<br/>
+<br/>
 
-First, run the development server:
+<a target="_blank" rel="noreferrer" href="https://portfolio-react-9ef7ow96w-jordaobm.vercel.app/">Link da aplicação na WEB</a>
 
-```bash
-npm run dev
-# or
-yarn dev
+<h1>📖 Portfólio ReactJS</h1>
+
+<h2 id="start">📙Sumário</h2>
+
+<ul>
+  <li><a href="#sobre">Sobre o repositório</a></li>
+  <li><a href="#advanced">Animações CSS</a></li>
+  <li><a href="#tecs">Tecnologias e bibliotecas utilizadas</a></li>
+  <li><a href="#fim">Considerações finais</a>
+  <li><a href="#creditos">Créditos</a>
+    
+</ul>
+
+<h2 id="sobre">💡 Sobre o repositório</h2>
+
+Esse repositório tem como objetivo treinar alguns conceitos básicos de animação de interfaces e criação de um layout totalmente responsivo. O Layout da aplicação foi baseado em um grande UI Designer, Tiago Luchtenberg, que escreveu um <a target="_blank" rel="noreferrer" href="https://tiagoluchtenberg.com.br/">E-book</a> sobre responsividade. Aproveito para deixar meus agradecimos ao autor do layout original, Tiago, que me permitiu "clonar" a interface da qual achei muito atraente. Vocês podem encontrá-lo no <a target="_blank" rel="noreferrer" href="https://www.instagram.com/tiagoluchtenberg/">Instagram</a>.
+
+O repositório em si servirá com um portfólio de apresentação de meus principais repositórios.
+
+<h2 id="advanced">🤩 Animações CSS</h2>
+
+A maior parte das animações presentes na aplicação foi construída partindo de Keyframes do próprio CSS. 
+
+```css
+
+@keyframes react {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+animation: react 60s linear 0s infinite normal forwards;
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Salvo uma excessão que foi construída utilizando framer-motion (especialmente pelo aprendizado).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+O Carousel presente na aplicação é um bom exemplo do CSS poderoso que temos hoje... o carousel foi totalmente construído em CSS e não utiliza JavaScript.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<div align="center">
+  <img alt="Carousel" title="Carousel" src="https://github.com/Jordaobm/portfolio-react/blob/main/src/assets/2.png" width="100%" />
+</div>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+<h2 id="tecs">🔨 Tecnologias e bibliotecas utilizadas</h2>
 
-To learn more about Next.js, take a look at the following resources:
+Como a aplicação foi construída com NextJS, utilizei a melhor integração para deploy, a <a target="_blank" rel="noreferrer" href="https://vercel.com/dashboard">Vercel</a>.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<ul>
+  <li>axios: ^0.25.0</li>
+  <li>framer-motion: ^6.2.3</li>
+  <li>next: 12.0.9</li>
+  <li>react: 17.0.2</li>
+  <li>react-dom: 17.0.2</li>
+  <li>react-query: ^3.34.13</li>
+  <li>styled-components: ^5.3.3</li>
+</ul>
+
+
+<h2 id="fim">👷 Considerações finais</h2>
+
+<h2 id="creditos">👨‍🎓 Créditos</h2>
+
+Especialmente à <a target="_blank" rel="noreferrer" href="https://www.instagram.com/tiagoluchtenberg/">UI Designer Tiago Luchtenberg</a> pelo <a target="_blank" rel="noreferrer" href="https://tiagoluchtenberg.com.br/">E-book</a> incrível e autorização da UI.
+
+<a href="#start">👆 Voltar ao Sumário</a>
+
+### Autor
+
+---
+
+<a href="https://github.com/Jordaobm" target="_blank">
+ <img src="https://avatars.githubusercontent.com/u/70074016?v=4" width="100px;" alt="Jordão"/>
+ <br />
+ <sub><b>Jordão Beghetto Massariol</b></sub></a> <a href="https://github.com/Jordaobm" title="Jordão">🚀</a>
+
+Feito com ❤️ por Jordão Beghetto Massariol 👋🏽 Entre em contato!
+
+<a href="https://www.linkedin.com/in/jord%C3%A3o-beghetto-massariol-9a9800105/"><img alt="Linkedin" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+
