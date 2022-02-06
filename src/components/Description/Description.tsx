@@ -25,7 +25,7 @@ export const Description = () => {
 
           <p>
             Com um pouco mais de 1 ano de carreira de desenvolvimento, <br />
-            estou me aprofundando cada vez mais nas técnologias <br />
+            estou me aprofundando cada vez mais nas tecnologias <br />
             ReactJS e React-Native, em TypeScript e JavaScript.
           </p>
 
