@@ -5,7 +5,7 @@
 <br/>
 <br/>
 
-<a target="_blank" rel="noreferrer" href="https://portfolio-react-9ef7ow96w-jordaobm.vercel.app/">Link da aplicação na WEB</a>
+<a target="_blank" rel="noreferrer" href="https://portfolio-react-jordaobm.vercel.app/">Link da aplicação na WEB</a>
 
 <h1>📖 Portfólio ReactJS</h1>
 
